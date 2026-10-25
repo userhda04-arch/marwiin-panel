@@ -6,7 +6,7 @@
     "heroku-prebuild": "npm install --save-dev",
     "heroku-postbuild": "npm install --save-dev && npm run build",
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "npm run prismaProd && next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",

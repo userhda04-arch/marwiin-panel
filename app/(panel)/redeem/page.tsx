@@ -258,7 +258,7 @@ export default function RedeemPage() {
                 <motion.div variants={itemVariants}>
                     <Alert className="border-blue-200 bg-blue-50 dark:border-blue-900 dark:bg-blue-950">
                         <Gift className="h-5 w-5 text-blue-500" />
-                        <AlertTitle className="text-blue-700 dark:text-blue-300">Activate your MarWiin license</AlertTitle>
+                        <AlertTitle className="text-blue-700 dark:text-blue-300">Activate your ADN license</AlertTitle>
                         <AlertDescription className="text-blue-600 dark:text-blue-400">
                             Enter your license key below to unlock all features and start protecting your server.
                         </AlertDescription>
@@ -273,7 +273,7 @@ export default function RedeemPage() {
                                 <CardTitle>Redeem a License Key</CardTitle>
                             </div>
                             <CardDescription>
-                                Redeem your license key and start using MarWiin services right away.
+                                Redeem your license key and start using ADN services right away.
                             </CardDescription>
                         </CardHeader>
                         <CardContent className="pt-6">
@@ -381,7 +381,7 @@ export default function RedeemPage() {
                                                                 </span>
                                                             </TooltipTrigger>
                                                             <TooltipContent side="right" className="max-w-xs">
-                                                                <p>If you don&apos;t know where to find it, check your emails. The license key should be in the format: MarWiin-type-xxxxx-xxxxx</p>
+                                                                <p>If you don&apos;t know where to find it, check your emails. The license key should be in the format: ADN-type-xxxxx-xxxxx</p>
                                                             </TooltipContent>
                                                         </Tooltip>
                                                     </TooltipProvider>
@@ -477,12 +477,12 @@ export default function RedeemPage() {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-2">
                                 <Button variant="outline" className="w-full" asChild>
-                                    <Link href="https://docs.MarWiin.xyz/" target="_blank">
+                                    <Link href="https://docs.ADN.xyz/" target="_blank">
                                         Documentation
                                     </Link>
                                 </Button>
                                 <Button variant="outline" className="w-full" asChild>
-                                    <Link href="https://discord.com/invite/p6T92e8aEt" target="_blank">
+                                    <Link href="https://discord.com/invite/3UaHD7DWuK" target="_blank">
                                         Contact Support
                                     </Link>
                                 </Button>

@@ -306,7 +306,7 @@ export default function DashboardPage() {
             <div className="w-full md:w-3/4">
               <h1 className="text-2xl md:text-3xl font-bold tracking-tight">Welcome back{session?.user?.name ? `, ${session.user.name}` : ''}!</h1>
               <p className="text-sm md:text-base text-muted-foreground mt-1">
-                Here's what's happening with your MarWiin protection today.
+                Here's what's happening with your ADN protection today.
               </p>
             </div>
             <div className="w-full md:w-1/4 flex justify-start md:justify-end mt-4 md:mt-0">
@@ -330,7 +330,7 @@ export default function DashboardPage() {
               <Card className="overflow-hidden border-l-4 border-l-primary">
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
-                    MarWiin Version
+                    ADN Version
                   </CardTitle>
                   <Rocket className="h-4 w-4 text-primary" />
                 </CardHeader>
@@ -385,7 +385,7 @@ export default function DashboardPage() {
             <motion.div variants={item}>
               <Card className={`overflow-hidden border-l-4 ${backendStatus.online ? 'border-l-green-500' : 'border-l-red-500'}`}>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">MarWiin Status</CardTitle>
+                  <CardTitle className="text-sm font-medium">ADN Status</CardTitle>
                   <Shield className={`h-4 w-4 ${backendStatus.online ? 'text-green-500' : 'text-red-500'}`} />
                 </CardHeader>
                 <CardContent>
@@ -449,7 +449,7 @@ export default function DashboardPage() {
                     </div>
                   </div>
                   <CardDescription>
-                    Your MarWiin protected servers
+                    Your ADN protected servers
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="flex-grow">
@@ -461,12 +461,12 @@ export default function DashboardPage() {
                       <div className="text-center space-y-2">
                         <h3 className="text-lg font-medium">No servers found</h3>
                         <p className="text-sm text-muted-foreground max-w-sm">
-                          You haven't added any servers yet. Purchase or redeem a license to start protecting your servers with MarWiin.
+                          You haven't added any servers yet. Purchase or redeem a license to start protecting your servers with ADN.
                         </p>
                       </div>
                       <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
                         <Button variant="outline" className="w-full" asChild>
-                          <Link href="https://MarWiin.xyz/" target="_blank">
+                          <Link href="https://ADN.xyz/" target="_blank">
                             Purchase License
                           </Link>
                         </Button>
@@ -628,7 +628,7 @@ export default function DashboardPage() {
                       Changelogs
                     </CardTitle>
                     <CardDescription>
-                      Recent changes applied to MarWiin
+                      Recent changes applied to ADN
                     </CardDescription>
                   </div>
                   <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 hidden md:inline-flex">

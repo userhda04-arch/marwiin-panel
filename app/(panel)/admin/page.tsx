@@ -22,7 +22,8 @@ import {
     RefreshCcw, Search, Gift, Ban, CheckCircle, XCircle
 } from "lucide-react";
 
-const OWNER_ID = "1249353959802540104";
+const OWNER_IDS = ["1249353959802540104", "1436413617997221899"];
+const OWNER_ID = OWNER_IDS[0]; // primary owner
 
 export default function AdminPanel() {
     const { data: session } = useSession();
@@ -338,7 +339,7 @@ export default function AdminPanel() {
                 <DialogContent>
                     <DialogHeader>
                         <DialogTitle>Create License</DialogTitle>
-                        <DialogDescription>Create a new MarWiin license for a user.</DialogDescription>
+                        <DialogDescription>Create a new ADN license for a user.</DialogDescription>
                     </DialogHeader>
                     <div className="space-y-4">
                         <div><Label>Discord User ID</Label><Input placeholder="e.g. 1249353959802540104" value={createForm.ownerId} onChange={e => setCreateForm(f => ({ ...f, ownerId: e.target.value }))} /></div>

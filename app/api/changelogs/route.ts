@@ -8,7 +8,7 @@ export async function POST(req: Request) {
         if (!session) return NextResponse.json({ message: "Invalid Session" }, { status: 401 })
 
         const commits = await (
-            await fetch("https://api.github.com/repos/AYZNN/MarWiinV4/commits?per_page=20", {
+            await fetch("https://api.github.com/repos/AYZNN/ADNV4/commits?per_page=20", {
                 headers: {
                     Authorization: `token ${process.env.GITHUB_TOKEN}`
                 }

@@ -58,7 +58,7 @@ export function getMenuList(pathname: string): Group[] {
         },
         
         {
-            groupLabel: "MarWiin",
+            groupLabel: "ADN",
             menus: [
                 {
                     href: "/admin",
@@ -82,7 +82,7 @@ export function getMenuList(pathname: string): Group[] {
                     submenus: []
                 },
                 {
-                    href: "https://docs.MarWiin.xyz/",
+                    href: "https://docs.ADN.xyz/",
                     target: "_blank",
                     label: "Documentation",
                     active: false,

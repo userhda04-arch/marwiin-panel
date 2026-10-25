@@ -13,20 +13,20 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
-      <title>MarWiin - Web Panel</title>
-      <meta name="title" content="MarWiin - Web Panel" />
+      <title>ADN - Web Panel</title>
+      <meta name="title" content="ADN - Web Panel" />
       <meta name="description" content="Manage anti-cheat settings and server remotely. User-friendly interface for convenience." />
       <link rel="icon" href="/favicon.ico" />
 
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://panel.marwiin.xyz/" />
-      <meta property="og:title" content="MarWiin - Web Panel" />
+      <meta property="og:url" content="https://panel.ADN.xyz/" />
+      <meta property="og:title" content="ADN - Web Panel" />
       <meta property="og:description" content="Manage anti-cheat settings and server remotely. User-friendly interface for convenience." />
       <meta property="og:image" content="/banner.png" />
 
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://panel.marwiin.xyz/" />
-      <meta property="twitter:title" content="MarWiin - Web Panel" />
+      <meta property="twitter:url" content="https://panel.ADN.xyz/" />
+      <meta property="twitter:title" content="ADN - Web Panel" />
       <meta property="twitter:description" content="Manage anti-cheat settings and server remotely. User-friendly interface for convenience." />
       <meta property="twitter:image" content="/banner.png" />
 

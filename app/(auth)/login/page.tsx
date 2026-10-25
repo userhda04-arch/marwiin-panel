@@ -42,7 +42,7 @@ const Login = () => {
                 transition={{ duration: 0.5 }}
                 className="mb-8"
             >
-                <h1 className="text-4xl font-bold text-primary mb-2">MarWiin</h1>
+                <h1 className="text-4xl font-bold text-primary mb-2">ADN</h1>
                 <p className="text-muted-foreground">Cloud Management Panel</p>
             </motion.div>
 
@@ -56,7 +56,7 @@ const Login = () => {
                     <CardHeader className="space-y-3">
                         <CardTitle className="text-2xl">Welcome Back</CardTitle>
                         <CardDescription className="text-base">
-                            Access your MarWiin dashboard to manage licenses and server configurations
+                            Access your ADN dashboard to manage licenses and server configurations
                         </CardDescription>
                     </CardHeader>
                     <CardContent className="flex items-center justify-center py-4">

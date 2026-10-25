@@ -40,7 +40,7 @@ export async function GET(req: NextRequest) {
     // Path to the file on the server
     // This assumes you've uploaded the file to the public directory
     // For production, you might want to store this in a more secure location
-    const filePath = path.join(process.cwd(), "public", "downloads", "MarWiin.zip");
+    const filePath = path.join(process.cwd(), "public", "downloads", "ADN.zip");
 
     // Check if file exists
     if (!fs.existsSync(filePath)) {
@@ -58,7 +58,7 @@ export async function GET(req: NextRequest) {
 
     // Set appropriate headers
     response.headers.set("Content-Type", "application/zip");
-    response.headers.set("Content-Disposition", 'attachment; filename="MarWiin.zip"');
+    response.headers.set("Content-Disposition", 'attachment; filename="ADN.zip"');
     response.headers.set("Content-Length", fileBuffer.length.toString());
 
     await prisma.server_Activity.create({

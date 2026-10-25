@@ -127,7 +127,7 @@ export default function DownloadPage() {
     if (!canDownload) {
       notify(
         "Access Denied",
-        "You need an active license to download MarWiin."
+        "You need an active license to download ADN."
       )
       return
     }
@@ -135,7 +135,7 @@ export default function DownloadPage() {
     try {
       setIsDownloading(true)
 
-      const response = await fetch("/api/download/MarWiin")
+      const response = await fetch("/api/download/ADN")
 
       if (response.ok) {
         const blob = await response.blob()
@@ -144,7 +144,7 @@ export default function DownloadPage() {
         const a = document.createElement("a")
         a.style.display = "none"
         a.href = url
-        a.download = "MarWiin.zip"
+        a.download = "ADN.zip"
         document.body.appendChild(a)
         a.click()
         setTimeout(function () {
@@ -156,16 +156,16 @@ export default function DownloadPage() {
 
         notify(
           "Download",
-          "Successfully downloaded MarWiin.",
+          "Successfully downloaded ADN.",
           "redirect",
           "Installation Guide",
-          "https://ayznnn.gitbook.io/MarWiin-v4/getting-started/installation-guide"
+          "https://ayznnn.gitbook.io/ADN-v4/getting-started/installation-guide"
         )
       } else {
         if (response.status === 403) {
           notify(
             "License Required",
-            "You need an active license to download MarWiin."
+            "You need an active license to download ADN."
           )
         } else if (response.status === 404) {
           notify("Download Failed", "The requested file could not be found.")
@@ -177,7 +177,7 @@ export default function DownloadPage() {
         }
       }
     } catch (error) {
-      console.error("Error downloading MarWiin:", error)
+      console.error("Error downloading ADN:", error)
       notify(
         "Download Failed",
         "There was an error starting your download. Please try again."
@@ -227,7 +227,7 @@ export default function DownloadPage() {
           <Alert
             className="cursor-pointer border-red-200 bg-red-50 dark:border-red-900 dark:bg-red-950"
             onClick={() =>
-              window.open("https://MarWiin.xyz/dashboard", "_blank")
+              window.open("https://ADN.xyz/dashboard", "_blank")
             }
           >
             <Info className="size-5 text-red-500" />
@@ -236,7 +236,7 @@ export default function DownloadPage() {
             </AlertTitle>
             <AlertDescription className="text-red-600 dark:text-red-400">
               This download panel is outdated and no longer supported. Please
-              visit the new panel at MarWiin.xyz/dashboard to download the
+              visit the new panel at ADN.xyz/dashboard to download the
               latest files there.
             </AlertDescription>
           </Alert>
@@ -248,7 +248,7 @@ export default function DownloadPage() {
               <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex items-center gap-2">
                   <Shield className="size-5 shrink-0 text-primary" />
-                  <CardTitle>MarWiin Anti-Cheat</CardTitle>
+                  <CardTitle>ADN Anti-Cheat</CardTitle>
                 </div>
                 <Badge
                   variant="destructive"
@@ -269,10 +269,10 @@ export default function DownloadPage() {
                   <Download className="size-8 text-primary" />
                 </div>
                 <h3 className="mb-2 text-lg font-medium">
-                  MarWiin Anti-Cheat
+                  ADN Anti-Cheat
                 </h3>
                 <p className="mx-auto max-w-md text-sm text-muted-foreground sm:text-base">
-                  Download the latest version of MarWiin to protect your
+                  Download the latest version of ADN to protect your
                   server from cheaters and hackers.
                 </p>
               </div>
@@ -300,7 +300,7 @@ export default function DownloadPage() {
                     ) : (
                       <>
                         <Download className="size-4" />
-                        Download MarWiin
+                        Download ADN
                       </>
                     )}
                   </Button>
@@ -317,7 +317,7 @@ export default function DownloadPage() {
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>
-                          You need an active license to download MarWiin.
+                          You need an active license to download ADN.
                         </p>
                         <Link
                           href="/redeem"
@@ -334,7 +334,7 @@ export default function DownloadPage() {
               <div className="flex w-full flex-col gap-2 sm:flex-row">
                 <Button variant="outline" asChild className="w-full">
                   <Link
-                    href="https://ayznnn.gitbook.io/MarWiin-v4/getting-started/installation-guide"
+                    href="https://ayznnn.gitbook.io/ADN-v4/getting-started/installation-guide"
                     target="_blank"
                   >
                     <FileText className="mr-2 size-4" />
@@ -343,7 +343,7 @@ export default function DownloadPage() {
                 </Button>
 
                 <Button variant="outline" asChild className="w-full">
-                  <Link href="https://docs.MarWiin.xyz/" target="_blank">
+                  <Link href="https://docs.ADN.xyz/" target="_blank">
                     <ExternalLink className="mr-2 size-4" />
                     Documentation
                   </Link>

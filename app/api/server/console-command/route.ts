@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
 
-    // Forward command to the MarWiin API
+    // Forward command to the ADN API
     const backendUrl = process.env.BACKEND_URL;
     if (!backendUrl) return NextResponse.json({ error: "Backend not configured" }, { status: 500 });
 

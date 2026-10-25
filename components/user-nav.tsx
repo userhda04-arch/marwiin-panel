@@ -78,7 +78,7 @@ export function UserNav() {
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem className="hover:cursor-pointer" asChild>
-            <Link href="https://docs.MarWiin.xyz" target="_blank" className="flex items-center">
+            <Link href="https://docs.ADN.xyz" target="_blank" className="flex items-center">
               <Book className="w-4 h-4 mr-3 text-muted-foreground" />
               Documentation
             </Link>

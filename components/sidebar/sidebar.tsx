@@ -30,7 +30,7 @@ export function Sidebar() {
           asChild
         >
           <Link href="/dashboard" className="flex items-center gap-2">
-            <img src="https://logodix.com/logo/423109.png" alt="MarWiin" className="h-7 w-7 rounded-full object-cover" />
+            <img src="https://logodix.com/logo/423109.png" alt="ADN" className="h-7 w-7 rounded-full object-cover" />
             <h1
               className={cn(
                 "whitespace-nowrap text-lg font-bold transition-[transform,opacity,display] duration-300 ease-in-out",
@@ -39,7 +39,7 @@ export function Sidebar() {
                   : "translate-x-0 opacity-100"
               )}
             >
-            MarWiin
+            ADN
             </h1>
           </Link>
         </Button>

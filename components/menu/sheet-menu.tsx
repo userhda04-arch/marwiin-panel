@@ -27,7 +27,7 @@ export function SheetMenu() {
           >
             <Link href="/dashboard" className="flex items-center gap-2">
               <ShieldCheck className="w-6 h-6 mr-1" />
-              <h1 className="font-bold text-lg">MarWiin</h1>
+              <h1 className="font-bold text-lg">ADN</h1>
             </Link>
           </Button>
         </SheetHeader>

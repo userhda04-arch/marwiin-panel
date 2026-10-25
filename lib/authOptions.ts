@@ -15,7 +15,20 @@ export const authOptions: NextAuthOptions = {
                 url: "https://discord.com/api/oauth2/authorize",
                 params: { scope: 'identify guilds.members.read guilds.join' }
             },
-            token: "https://discord.com/api/oauth2/token",
+            token: {
+                url: "https://discord.com/api/oauth2/token",
+                async request(context: any) {
+                    const { provider, params, checks, client } = context;
+                    // Remove iss to bypass issuer check
+                    const { iss, ...cleanParams } = params;
+                    const tokens = await client.oauthCallback(
+                        provider.callbackUrl,
+                        cleanParams,
+                        checks
+                    );
+                    return { tokens };
+                }
+            },
             userinfo: "https://discord.com/api/users/@me",
             clientId: process.env.DISCORD_CLIENT_ID as string,
             clientSecret: process.env.DISCORD_CLIENT_SECRET as string,

@@ -7,6 +7,7 @@
     "heroku-postbuild": "npm install --save-dev && npm run build",
     "dev": "next dev",
     "build": "prisma generate && next build",
+    "postinstall": "node scripts/patch-nextauth.js",
     "start": "npm run prismaProd && next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",

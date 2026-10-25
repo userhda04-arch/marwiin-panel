@@ -1,0 +1,97 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
+  directUrl         = env("SHADOW_DATABASE_URL")
+}
+
+model License {
+  id                  String        @id @default(uuid())
+  ownerId             String
+  serverIp            String?
+  serverName          String        @default("My New Server")
+  bannerUrl           String?
+  serverConfiguration Json          @default("{}")
+  serverExpiration    BigInt
+  isBanned            Boolean       @default(false)
+  lastStartedAt       DateTime?
+  createdAt           DateTime      @default(now())
+  updatedAt           DateTime      @updatedAt
+  licenseKey          String        @unique
+  serverInfo          Server_Infos?
+}
+
+model Redeemable {
+  id             Int    @id @default(autoincrement())
+  expirationType String
+  generatedBy    String
+  licenseKey     String @unique
+}
+
+model Server_Member {
+  id          Int      @id @default(autoincrement())
+  licenseId   String
+  memberId    String
+  isAdmin     Boolean  @default(false)
+  isDeveloper Boolean  @default(false)
+  createdAt   DateTime @default(now())
+}
+
+model Blacklisted_Id {
+  id         Int      @id @default(autoincrement())
+  HWID       String   @unique
+  licenseKey String?
+  reason     String?
+  bannedAt   DateTime @default(now())
+}
+
+model Config {
+  id            String @id @default(uuid())
+  createdBy     String
+  configuration Json   @default("{}")
+}
+
+model Version {
+  id        Int      @id @default(autoincrement())
+  version   String
+  updatedAt DateTime @default(now()) @updatedAt
+}
+
+enum ActivityType {
+  SERVER_START
+  SERVER_STOP
+  SERVER_RENAME
+  SERVER_EXPIRED
+  SERVER_RENEW
+  SERVER_CREATE
+  MEMBER_ADD
+  MEMBER_REMOVE
+  MEMBER_UPDATE
+  CONFIG_UPDATE
+  IP_RESET
+  DOWNLOAD
+}
+
+model Server_Activity {
+  id          Int          @id @default(autoincrement())
+  licenseId   String       @default("")
+  action      ActivityType
+  details     String?
+  performedBy String?
+  createdAt   DateTime     @default(now())
+}
+
+model Server_Infos {
+  id          String   @id @unique
+  licenseKey  String
+  playerCount Int
+  slots       Int
+  playerList  Json
+  banCount    Int
+  banList     Json
+  updatedAt   DateTime @default(now()) @updatedAt
+  license     License  @relation(fields: [id], references: [id])
+}

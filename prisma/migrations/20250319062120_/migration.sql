@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Server_Member" ADD COLUMN     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP;

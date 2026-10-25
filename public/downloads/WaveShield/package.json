@@ -1,0 +1,12 @@
+{
+  "name": "waveshield",
+  "author": "ayznnn",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "socket.io-client": "^4.8.1"
+  }
+}
